@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: Library Management System
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/orclpdb
+    username: hr
+    password: hr
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+app:
+  jwtSecret: mySecretKey
+  jwtExpirationInMs: 604800000
+
+
+logging:
+  level:
+    com.library.management: DEBUG
+    org.springframework.security: DEBUG
